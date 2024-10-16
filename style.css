@@ -16,12 +16,18 @@ body {
   /* background-color:black; */
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 .header {
   width: 10%;
   height: 100vh;
   background-color: black;
   color: white;
-  position: relative;
+  position: fixed;
 }
 .header__logo {
   width: 100%;
@@ -52,4 +58,48 @@ body {
 
 .fa-solid {
   color: white;
+}
+
+main {
+  width: 90%;
+  margin-left: 10%;
+  height: 90vh;
+  z-index: -10;
+}
+
+.hero {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero__banner {
+  width: 80%;
+  height: 80vh;
+  background-image: url("/images/banner.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: -1;
+}
+.hero__overlay {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(to right, rgb(0, 0, 0) 20%, transparent, transparent), linear-gradient(to top, rgb(0, 0, 0) 5%, transparent, transparent);
+  z-index: 1;
+  position: absolute;
+}
+.hero__content {
+  background-color: red;
+  position: absolute;
+  border: 2px solid pink;
+  top: 40vh;
+  left: 0;
+  z-index: 1000;
+}
+
+.collection {
+  height: 100vh;
+  background-color: green;
+  margin-top: 80vh;
 }/*# sourceMappingURL=style.css.map */

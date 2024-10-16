@@ -17,13 +17,20 @@ body {
   /* background-color:black; */
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  // position: relative;
+}
+
 
 .header {
   width: 10%;
   height: 100vh;
   background-color: black;
   color:white;
-  position: relative;
+  position: fixed;
   // display: flex;
   // flex-direction: column;
   // align-content: center;
@@ -66,4 +73,87 @@ display: flex;
 
 .fa-solid{
   color:white;
+}
+
+
+
+main{
+  width: 90%;
+  margin-left:10%;
+    height: 90vh;
+  // border:5px solid black;
+    // background-color: black;
+    z-index: -10;
+  //  background: linear-gradient(to right, rgba(0,0,0,1) 50%, transparent);
+
+
+
+  // position: relative;
+
+}
+
+.hero{
+
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  &__banner{
+  width: 80%;
+  // background-color: pink;
+  height: 80vh;
+  background-image: url('/images/banner.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+    // background-attachment: fixed;
+  // border:5px solid pink;
+  z-index: -1;
+  
+
+
+//     color: red;
+// border:2px solid red;
+  }
+
+  &__overlay{
+    width:100%;
+    height: 80vh;
+    // background-color: black;
+    background: linear-gradient(to right, rgba(0,0,0,1) 20% , transparent,transparent), linear-gradient(to top, rgba(0,0,0,1) 5% , transparent,transparent);
+    z-index: 1;
+    position: absolute;
+
+    
+  }
+
+  // &__overlay2{
+  //   position: absolute; 
+  //   bottom:0;
+  //   right:20%;
+  //   background-color: white;
+  //   width: 100%;
+  //   height: 5vh;
+  //   z-index:2;
+
+  // }
+
+
+  &__content{
+    background-color: red;
+    position: absolute;
+    border: 2px solid pink;
+    top:40vh;
+    left:0;
+    z-index: 1000;
+
+  }
+  
+}
+
+.collection{
+  height:100vh;
+  background-color: green;
+  margin-top:80vh;
 }
